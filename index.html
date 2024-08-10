@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналіз війни Росії проти України</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO мета-теги -->
+    <meta name="description" content="Детальний аналіз війни Росії проти України, включаючи причини, наслідки, порушення російської армії, та кількість загиблих мирних жителів.">
+    <meta name="keywords" content="війна, Росія, Україна, вторгнення, російська армія, порушення, злочини, мирні жителі, наслідки, аналіз">
+    <meta name="author" content="Ваше Ім'я">
+
+    <!-- Open Graph для соціальних мереж -->
+    <meta property="og:title" content="Аналіз війни Росії проти України">
+    <meta property="og:description" content="Детальний аналіз причин і наслідків війни, порушень російської армії, та кількість загиблих мирних жителів.">
+    <meta property="og:image" content="https://via.placeholder.com/800x400">
+    <meta property="og:url" content="https://yourwebsite.com/your-page">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Аналіз війни Росії проти України">
+    <meta name="twitter:description" content="Детальний аналіз війни Росії проти України, включаючи причини, наслідки, порушення російської армії, та кількість загиблих мирних жителів.">
+    <meta name="twitter:image" content="https://via.placeholder.com/800x400">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #d9534f;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .image, .video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .comments {
+            margin-top: 30px;
+        }
+
+        .comments h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .comment-box {
+            margin-top: 10px;
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        .like-button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-button:hover {
+            background-color: #c9302c;
+        }
+
+        .like-count {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .comments-section p {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #777;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #5bc0de;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #31b0d5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Аналіз війни Росії проти України</h1>
+    
+    <!-- Форма авторизации администратора -->
+    <div id="admin-login" style="display:none;">
+        <h2>Вхід адміністратора</h2>
+        <form id="login-form">
+            <label for="username">Имя пользователя:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="button" onclick="login()">Войти</button>
+        </form>
+    </div>
+
+    <!-- Админка -->
+    <div id="admin-panel" style="display:none;">
+        <h2>Панель адміністратора</h2>
+        <form id="content-form">
+            <label for="content">Редактировать содержание:</label><br>
+            <textarea id="content" rows="10" cols="50"></textarea><br><br>
+            <button type="button" onclick="saveContent()">Сохранить изменения</button>
+        </form>
+    </div>
+
+    <div class="content">
+        <!-- Первая часть статьи -->
+        <div class="section">
+            <h2>Вступ</h2>
+            <p>У лютому 2022 року Росія розпочала військове вторгнення на територію України, що стало найбільшим військовим конфліктом у Європі з часів Другої світової війни. Це напад викликав широке міжнародне осудження і призвів до безпрецедентних санкцій проти Росії. У цій статті ми розглянемо основні причини, через які Росія вирішила на цей крок, і проаналізуємо наслідки цього рішення.</p>
+            <img src="img/00261f5.jpg" alt="Військовий конфлікт в Україні" class="image">
+        </div>
+
+        <div class="section">
+            <h2>Причини нападу</h2>
+            <p>Однією з ключових причин нападу є прагнення Росії відновити свій вплив на пострадянському просторі, особливо щодо України, яку Кремль розглядає як важливу частину своєї історичної та культурної сфери впливу. Після повалення проросійського уряду в Україні в 2014 році і подальшого зближення України з Заходом, Росія почала розглядати цю країну як загрозу своїм геополітичним інтересам.</p>
+            <p>Крім того, важливим фактором є прагнення російського керівництва запобігти розширенню НАТО на схід. Україна, як потенційний член НАТО, розглядається Москвою як серйозна загроза безпеці Росії. Проте, ці аргументи часто піддаються критиці, оскільки НАТО ніколи не становила прямої загрози для Росії, і напад на Україну порушує всі міжнародні норми і принципи.</p>
+            <img src="img/3435.jpg" width="800" alt="Геополітичні інтереси Росії" class="image">
+        </div>
+
+        <!-- Новий розділ: Російська армія та її порушення -->
+        <div class="section">
+            <h2>Російська армія: Порушення та Злочини</h2>
+            <p>Російська армія активно використовує різні види озброєння, включаючи артилерію, танки, ракети та авіацію, щоб здійснювати атаки на українські міста та села. Багато з цих атак спрямовані на цивільні об'єкти, такі як школи, лікарні, житлові будинки, що є порушенням міжнародного гуманітарного права.</p>
+            <p>Станом на 2024 рік, різні джерела оцінюють кількість загиблих серед мирного населення України в десятки тисяч. Російські військові обстрілюють такі міста, як Одеса, Харків, Миколаїв, Київ та багато інших, залишаючи за собою руйнування та численні жертви серед цивільного населення.</p>
+            <p>Використання Росією касетних боєприпасів, а також ракет "Іскандер", які часто націлюються на густонаселені райони, викликає широке міжнародне осудження.</p>
+            <img src="img/657657.jpg" alt="Російська армія" class="image">
+        </div>
+
+        <!-- Друга частина статті -->
+        <div class="section">
+            <h2>Наслідки для Росії та України</h2>
+            <p>Військове вторгнення Росії в Україну мало далекосяжні наслідки як для України, так і для самої Росії. Серед основних наслідків можна виділити наступні:</p>
+
+            <ul>
+                <li><strong>Гуманітарна криза:</strong> Мільйони українців були змушені залишити свої домівки, що призвело до однієї з найбільших міграційних криз в Європі з часів Другої світової війни.</li>
+                <li><strong>Знищення інфраструктури:</strong> Російські військові обстріли призвели до серйозних руйнувань в багатьох містах України, таких як М Харків, Одеса, Миколаїв, і Київ. Були зруйновані житлові будинки, школи, лікарні та критична інфраструктура.</li>
+                <li><strong>Економічний спад:</strong> Війна спричинила величезні економічні втрати для обох країн. Україна втратила значну частину свого промислового потенціалу, а Росія зіткнулася з економічними санкціями, які призвели до падіння ВВП і зниження рівня життя.</li>
+                <li><strong>Санкції проти Росії:</strong> Західні країни запровадили безпрецедентні санкції проти Росії, що призвело до ізоляції країни на міжнародній арені. Російські компанії були виключені з глобальних ринків, що сильно вдарило по економіці.</li>
+                <li><strong>Міжнародна ізоляція:</strong> Росія стала об'єктом міжнародного осуду, і багато країн знизили або повністю припинили дипломатичні відносини з Москвою.</li>
+                <li><strong>Військові втрати:</strong> Обидві сторони зазнали значних втрат серед військових, але російські війська зазнали особливо великих втрат через жорсткий опір з боку українських збройних сил і партизанських рухів.</li>
+                <li><strong>Зміна геополітичного ландшафту:</strong> Війна вплинула на зміни в геополітичній ситуації в Європі, зокрема на зближення України з НАТО та ЄС, а також на переорієнтацію європейської енергетичної політики.</li>
+                <li><strong>Ескалація напруженості:</strong> Війна призвела до підвищення військової напруженості в Європі, що викликало побоювання щодо можливого поширення конфлікту на інші країни.</li>
+            </ul>
+
+            <!-- Вставка видео с YouTube -->
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GB4QW8DncyE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <p>Ці наслідки демонструють масштаб та серйозність конфлікту, який має довгострокові наслідки для обох країн, а також для всього світу. Важливо продовжувати зусилля, спрямовані на припинення конфлікту і відновлення миру в регіоні.</p>
+        </div>
+
+        <div class="section">
+            <h2>Висновок</h2>
+            <p>Агресія Росії проти України є безпрецедентним актом порушення міжнародного права і спробою силою змінити кордони в Європі. Засудження дій Росії є необхідним кроком для захисту суверенітету держав і підтримання миру та стабільності в регіоні. Продовження конфлікту матиме довгострокові негативні наслідки як для Росії, так і для всього світу.</p>
+            <img src="img/678678.jpg" alt="Наслідки війни" class="image">
+        </div>
+
+        <!-- Коментарі та лайки -->
+        <div class="comments">
+            <h3>Коментарі</h3>
+            <div id="comments-section" class="comments-section"></div>
+            <textarea id="comment-box" class="comment-box" placeholder="Напишіть ваш коментар..."></textarea>
+            <button onclick="postComment()" class="btn">Додати коментар</button>
+        </div>
+
+        <div class="like-section">
+            <button onclick="likePost()" class="like-button">Лайкнути</button>
+            <span id="like-count" class="like-count">0</span> лайків
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Ваше Ім'я. Всі права захищені.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('admin-login').style.display = 'block';
+            loadCommentsAndLikes();
+        });
+
+        function loadCommentsAndLikes() {
+            fetch('/comments')
+                .then(response => response.json())
+                .then(data => {
+                    const commentSection = document.getElementById('comments-section');
+                    commentSection.innerHTML = '';
+                    data.comments.forEach(comment => {
+                        const newComment = document.createElement('p');
+                        newComment.innerText = comment;
+                        commentSection.appendChild(newComment);
+                    });
+                    document.getElementById('like-count').innerText = data.likes;
+                });
+        }
+
+        function postComment() {
+            const commentBox = document.getElementById('comment-box');
+            const commentText = commentBox.value;
+
+            if (commentText.trim() !== "") {
+                fetch('/comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ comment: commentText }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    commentBox.value = "";
+                    loadCommentsAndLikes();
+                });
+            }
+        }
+
+        function likePost() {
+            fetch('/like', {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('like-count').innerText = data.likes;
+            });
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('admin-login').style.display = 'none';
+                    document.getElementById('admin-panel').style.display = 'block';
+                } else {
+                    alert('Неверное имя пользователя или пароль!');
+                }
+            });
+        }
+
+        function saveContent() {
+            const newContent = document.getElementById('content').value;
+
+            fetch('/save-content', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ content: newContent }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Содержание обновлено!');
+                } else {
+                    alert('Ошибка при сохранении!');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
